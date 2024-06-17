@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {Text,View, Image, StyleSheet} from 'react-native';
 import logo from '../../../assets/logo.png';
 import { carregaTopo } from "../../../servicos/carregaDados";
@@ -10,7 +10,7 @@ class Topo extends React.Component{
       legenda: '...',
     }
   }
-  
+
   atualizaTopo () {
     const retorno = carregaTopo();
     this.setState({topo: retorno});
@@ -42,11 +42,14 @@ const estilos = StyleSheet.create({
       marginTop: 24,
       fontSize: 26,
       lineHeight: 42,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      color: '#464646'
   },
   legenda: {
       fontSize: 16,
       lineHeight: 26,
+      color: '#A3A3A3',
+
   }
 });
 
